@@ -1,0 +1,30 @@
+server {
+    listen       80;
+    server_name  localhost;
+
+    access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        proxy_pass http://localhost:8080/;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+
+#server {
+#    listen 443;
+#    ssl on;
+#    ssl_certificate      /etc/ssl/site_bundle.crt;
+#    ssl_certificate_key  /etc/ssl/site.key;
+#
+#    server_name localhost;
+#
+#    access_log /var/log/nginx/log/www.access.log  main;
+#
+#    location / {
+#        proxy_pass http://localhost:8080/;
+#    }
+#}

@@ -1,0 +1,25 @@
+DEPENDENCIES
+  grailsapp
+    path: .
+    metadata: true
+  java
+
+GRAPH
+  apt (2.7.0)
+  firewall (1.6.0)
+    poise (~> 2.0)
+  grailsapp (0.1.0)
+    firewall (>= 0.0.0)
+    java (>= 0.0.0)
+    selinux_policy (>= 0.0.0)
+    sysdig (>= 0.0.0)
+  java (1.31.0)
+  poise (2.2.3)
+  selinux_policy (0.7.1)
+  sysdig (0.3.1)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.6.3)
+  yum-epel (0.6.2)
+    yum (~> 3.2)

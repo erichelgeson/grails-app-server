@@ -1,0 +1,9 @@
+[Unit]
+Description=grailsapp Java Daemon
+
+[Service]
+ExecStart=/usr/bin/java -jar <%= node['grailsapp']['jar'] %>
+User=<%= node['grailsapp']['user'] %>
+
+[Install]
+WantedBy=multi-user.target

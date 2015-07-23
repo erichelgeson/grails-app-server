@@ -1,0 +1,6 @@
+# systemd commands:
+systemctl daemon-reload # Reload systemd config from disk
+systemctl [start|stop|status] myapp.service # similar to service myapp start
+systemctl enable myapp.service # set service to start onboot
+journalctl -u myapp.service -f # -f tails stdout logs
+journalctl -u myapp.service --since=00:00 --until=9:30 # filter on a time period
